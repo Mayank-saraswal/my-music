@@ -2,8 +2,7 @@
 
 ### Show some :heart: and :star: the repo to support the project
 
-[![GitHub stars](https://img.shields.io/github/stars/cyberboysumanjay/jiosaavnapi.svg?style=social&label=Star)](https://github.com/cyberboysumanjay/JioSaavnAPI) ![GitHub followers](https://img.shields.io/github/followers/cyberboysumanjay.svg?style=social&label=Follow)
-[![Telegram Channel](https://img.shields.io/badge/Telegram-Channel-orange)](https://t.me/sjprojects)
+[![GitHub stars](https://img.shields.io/github/stars/Mayank-saraswal/my-music.svg?style=social&label=Star)](https://github.com/Mayank-saraswal/my-music) ![GitHub followers](https://img.shields.io/github/followers/Mayank-saraswal.svg?style=social&label=Follow)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 #### JioSaavn API written in Python using Flask  
@@ -66,7 +65,7 @@
 
 Clone this repository using
 ```sh
-$ git clone https://github.com/cyberboysumanjay/JioSaavnAPI
+$ git clone https://github.com/Mayank-saraswal/my-music
 ```
 Enter the directory and install all the requirements using
 ```sh
@@ -76,7 +75,7 @@ Run the app using
 ```sh
 $ python3 app.py
 ```
-Navigate to 127.0.0.1:5000 to see the Homepage
+Navigate to 127.0.0.1:5100 to see the Homepage
 
 ### **Usage**:
 Fetching lyrics is optional and is triggered only when it is passed as an argument in the GET Request. (**&lyrics=true**)
@@ -85,50 +84,71 @@ Fetching lyrics is optional and is triggered only when it is passed as an argume
 ---
 ##### **Universal Endpoint**: (Supports Song Name, Song Link, Album Link, Playlist Link)
 ```sh
-http://127.0.0.1:5000/result/?query=<insert-jiosaavn-link-or-query-here>&lyrics=true
+http://127.0.0.1:5100/result/?query=<insert-jiosaavn-link-or-query-here>&lyrics=true
 ```
-**Example:** Navigate to http://127.0.0.1:5000/result/?query=alone to get a JSON response of songs data in return.
+**Example:** Navigate to http://127.0.0.1:5100/result/?query=alone to get a JSON response of songs data in return.
 
 ----
 
 
-##### **Song URL Endpoint**:
+##### **Song Search Endpoint**:
 ```sh
-http://127.0.0.1:5000/song/?query=<insert-jiosaavn-song-link>&lyrics=true
+http://127.0.0.1:5100/song/?query=<insert-song-name-or-jiosaavn-song-link>&lyrics=true
 ```
-**Example:** Navigate to http://127.0.0.1:5000/song/?query=https://www.jiosaavn.com/song/khairiyat/PwAFSRNpAWw to get a JSON response of song data in return.
+**Example:** Navigate to http://127.0.0.1:5100/song/?query=alone to get a JSON response of song data in return.
+
+---
+
+##### **Song by ID Endpoint**:
+```sh
+http://127.0.0.1:5100/song/get/?id=<insert-jiosaavn-song-id>&lyrics=true
+```
+**Example:** Navigate to http://127.0.0.1:5100/song/get/?id=PIzj75J8 to get a JSON response of song data by its ID.
 
 ---
 
 ##### **Playlist URL Endpoint**:
 ```sh
-http://127.0.0.1:5000/playlist/?query=<insert-jiosaavn-playlist-link>&lyrics=true
+http://127.0.0.1:5100/playlist/?query=<insert-jiosaavn-playlist-link>&lyrics=true
 ```
-**Example:** Navigate to http://127.0.0.1:5000/playlist/?query=https://www.jiosaavn.com/featured/romantic-hits-2020---hindi/ABiMGqjovSFuOxiEGmm6lQ__ to get a JSON response of playlist data in return.
+**Example:** Navigate to http://127.0.0.1:5100/playlist/?query=https://www.jiosaavn.com/featured/romantic-hits-2020---hindi/ABiMGqjovSFuOxiEGmm6lQ__ to get a JSON response of playlist data in return.
 
 ---
 
 ##### **Album URL Endpoint**:
 ```sh
-http://127.0.0.1:5000/album/?query=<insert-jiosaavn-album-link>&lyrics=true
+http://127.0.0.1:5100/album/?query=<insert-jiosaavn-album-link>&lyrics=true
 ```
-**Example:** Navigate to http://127.0.0.1:5000/album/?query=https://www.jiosaavn.com/album/chhichhore/V4F3M5,cNb4_ to get a JSON response of album data in return.
+**Example:** Navigate to http://127.0.0.1:5100/album/?query=https://www.jiosaavn.com/album/chhichhore/V4F3M5,cNb4_ to get a JSON response of album data in return.
 
 ---
 
 ##### **Lyrics Endpoint**:
 ```sh
-http://127.0.0.1:5000/lyrics/?query=<insert-jiosaavn-song-link-or-song-id>&lyrics=true
+http://127.0.0.1:5100/lyrics/?query=<insert-jiosaavn-song-link-or-song-id>&lyrics=true
 ```
-**Example:** Navigate to http://127.0.0.1:5000/lyrics/?query=https://www.jiosaavn.com/song/khairiyat/PwAFSRNpAWw to get a JSON response of lyrics data in return.
+**Example:** Navigate to http://127.0.0.1:5100/lyrics/?query=https://www.jiosaavn.com/song/khairiyat/PwAFSRNpAWw to get a JSON response of lyrics data in return.
 
 ---
 
-#### You can fork the repo and deploy on VPS or deploy it on Heroku :)  
+#### **Deployment**:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/cyberboysumanjay/JioSaavnAPI/tree/master)
+##### Deploy to Heroku
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Mayank-saraswal/my-music/tree/master)
 
 **Note:** Heroku gives US/Europe servers which won't be able to fetch all songs flawlessly. Use any Indian VPS for accurate results.
+
+---
+
+##### Deploy to Render
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Mayank-saraswal/my-music)
+
+A `render.yaml` configuration file is included in this repository for one-click Render deployment.
+
+---
+
+##### Deploy to Railway
+A `Procfile` and Railway configuration are included. See [railway-deploy.md](railway-deploy.md) for step-by-step instructions.
 
 ---
 
@@ -140,4 +160,4 @@ http://127.0.0.1:5000/lyrics/?query=<insert-jiosaavn-song-link-or-song-id>&lyric
 #### [Music_Downloader_CLI](https://github.com/thehamkercat/Music_Downloader_CLI) made by [TheHamkerCat](https://github.com/thehamkercat)
 #### Star the Repo in case you liked it :)
 
-### © [Sumanjay](https://cyberboysumanjay.github.io)
+### © [Mayank Saraswal](https://github.com/Mayank-saraswal)
